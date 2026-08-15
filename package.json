@@ -1,0 +1,22 @@
+{
+  "name": "dsh-price-badge",
+  "version": "0.1.0",
+  "description": "DeepSeek 峰谷费用时段徽章：网页右下角显示当前处于高峰还是空闲时段，点击展开人民币价格表（deepseek-v4-flash / v4-pro）。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "inject": ["@deepseek-ai/dsh-client-runtime"],
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}
