@@ -1,0 +1,6 @@
+# dsh-price-badge bundle patch: one insert registering the client-only badge.
+# The row id must match the host half's exported cordis `name`.
+- insert:
+    - id: price-badge
+      name: 'dsh-price-badge'
+      config: {}
